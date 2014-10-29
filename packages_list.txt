@@ -1,0 +1,10 @@
+ctrlp.vim
+nerdtree
+syntastic
+vim-colors-solarized
+vimdir.vim
+vim-indent-guides
+vim-javascript-syntax
+vim-sensible
+web-indent-read-only
+YouCompleteMe
