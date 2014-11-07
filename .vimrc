@@ -29,8 +29,4 @@ set number
 set relativenumber
 
 "powerline related
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set laststatus=2
-
+let g:powerline_loaded = 1
