@@ -1,5 +1,5 @@
 execute pathogen#infect()
-:set nocompatible
+set nocompatible
 syntax on
 filetype plugin indent on
 set tabstop=2 softtabstop=0 noexpandtab shiftwidth=2
