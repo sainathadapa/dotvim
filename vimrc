@@ -17,9 +17,6 @@ imap <C-v> <C-r><C-o>+
 "js code checker config for syntastic
 let g:syntastic_javascript_checkers = ['eslint']
 
-"auto folding of js files
-au FileType javascript call JavaScriptFold()
-
 "NERDTree on startup
 autocmd VimEnter * NERDTree | wincmd p
 set showcmd
@@ -27,6 +24,3 @@ set showcmd
 "hybrid line numbering mode
 set number
 set relativenumber
-
-"powerline related
-let g:powerline_loaded = 1
