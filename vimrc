@@ -31,6 +31,5 @@ set number
 set relativenumber
 
 "bind space to leader
-nnoremap <Space> <nop>
-let mapleader = <space>
+let mapleader = "\<Space>"
 
