@@ -32,4 +32,4 @@ set relativenumber
 
 "bind space to leader
 let mapleader = "\<Space>"
-
+let g:html_indent_inctags = "html,body,head,tbody" 
