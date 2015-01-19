@@ -10,7 +10,8 @@ set term=xterm
 
 "using dark solarized scheme
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme base16-solarized
 
 "configuring better key combinations for cut, copy, paste in gvim
 vmap <C-c> "+yi
