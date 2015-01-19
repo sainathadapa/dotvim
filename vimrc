@@ -5,8 +5,6 @@ syntax on
 filetype plugin indent on
 set showmode "show the mode i am in
 set tabstop=2 softtabstop=0 noexpandtab shiftwidth=2 "tab size is 2 space
-set t_Co=256
-set term=xterm
 
 "using dark solarized scheme
 set background=dark
