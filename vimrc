@@ -44,6 +44,10 @@ endif
 "bind space to leader
 let mapleader = "\<Space>"
 
+"switch : and ;
+nnoremap ; :
+nnoremap : ;
+
 """"""language specific settings""""""
 
 "indent all parts of html
