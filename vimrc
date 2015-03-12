@@ -6,10 +6,19 @@ filetype plugin indent on
 set showmode "show the mode i am in
 set tabstop=2 softtabstop=0 noexpandtab shiftwidth=2 "tab size is 2 space
 
-"using dark solarized scheme
+"colorscheme
 set background=dark
-"colorscheme solarized
-colorscheme base16-solarized
+colorscheme base16-mocha
+
+"list of good colorschemes by shade
+"BLUE
+"base16-harmonic16
+"base16-flat
+"base16-ocean
+"
+"BROWN
+"base16-eighties
+"base16-mocha
 
 "configuring better key combinations for cut, copy, paste in gvim
 vmap <C-c> "+yi
@@ -48,10 +57,14 @@ let mapleader = "\<Space>"
 nnoremap ; :
 nnoremap : ;
 
+"enable neocomplete
+let g:neocomplete#enable_at_startup = 1
+
 """"""language specific settings""""""
 
 "indent all parts of html
 let g:html_indent_inctags = "html,body,head,tbody" 
 
 "js code checker config for syntastic
-let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_checkers = ['eslint']
+
