@@ -43,3 +43,6 @@
 [submodule "bundle/base16-vim"]
 	path = bundle/base16-vim
 	url = git@github.com:chriskempson/base16-vim.git
+[submodule "bundle/neocomplete.vim"]
+	path = bundle/neocomplete.vim
+	url = git@github.com:Shougo/neocomplete.vim.git
