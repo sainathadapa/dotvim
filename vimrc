@@ -8,7 +8,10 @@ set tabstop=2 softtabstop=0 noexpandtab shiftwidth=2 "tab size is 2 space
 
 "colorscheme
 set background=dark
-colorscheme base16-mocha
+colorscheme peachpuff
+if has("gui_running")
+	colorscheme base16-mocha
+endif
 
 "list of good colorschemes by shade
 "BLUE
@@ -58,7 +61,9 @@ nnoremap ; :
 nnoremap : ;
 
 "enable neocomplete
-let g:neocomplete#enable_at_startup = 1
+if has("gui_running")
+	let g:neocomplete#enable_at_startup = 1
+endif
 
 """"""language specific settings""""""
 
