@@ -8,9 +8,10 @@ set tabstop=2 softtabstop=0 noexpandtab shiftwidth=2 "tab size is 2 space
 
 "colorscheme
 set background=dark
-colorscheme peachpuff
 if has("gui_running")
 	colorscheme base16-mocha
+else
+	colorscheme peachpuff
 endif
 
 "list of good colorschemes by shade
