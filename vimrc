@@ -4,7 +4,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set showmode "show the mode i am in
-set tabstop=2 softtabstop=0 noexpandtab shiftwidth=2 "tab size is 2 space
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 "tab size is 2 space
 
 "colorscheme
 set background=dark
