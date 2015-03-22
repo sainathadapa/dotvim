@@ -1,17 +1,29 @@
 "general settings
 set nocompatible
 execute pathogen#infect()
-syntax on
+
+" enable syntax highlighting
+syntax enable
+
 filetype plugin indent on
-set showmode "show the mode i am in
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 "tab size is 2 space
+
+"show the mode i am in
+set showmode 
+
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2
+
+" show a visual line under the cursor's current line 
+set cursorline
+
+" show the matching part of the pair for [] {} and ()
+set showmatch
 
 "colorscheme
 set background=dark
 if has("gui_running")
-	colorscheme base16-mocha
+  colorscheme base16-mocha
 else
-	colorscheme peachpuff
+  colorscheme peachpuff
 endif
 
 "list of good colorschemes by shade
@@ -24,7 +36,7 @@ endif
 "base16-eighties
 "base16-mocha
 
-"configuring better key combinations for cut, copy, paste in gvim
+"configuring normal os key combinations for cut, copy, paste
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
@@ -41,9 +53,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 set number
 set relativenumber
 
-"search settings
-set hlsearch
-set incsearch
+" search as characters are entered
+set incsearch 
+" highlight matches
+set hlsearch          
 
 "indents
 set autoindent
@@ -51,7 +64,7 @@ set smartindent
 
 " folding enable
 if has("folding")
-	set foldenable
+  set foldenable
 endif
 
 "bind space to leader
@@ -63,8 +76,11 @@ nnoremap : ;
 
 "enable neocomplete
 if has("gui_running")
-	let g:neocomplete#enable_at_startup = 1
+  let g:neocomplete#enable_at_startup = 1
 endif
+
+"turn off search highlight with double space
+nnoremap <leader><space> :nohlsearch<CR>
 
 """"""language specific settings""""""
 
@@ -73,4 +89,3 @@ let g:html_indent_inctags = "html,body,head,tbody"
 
 "js code checker config for syntastic
 "let g:syntastic_javascript_checkers = ['eslint']
-
