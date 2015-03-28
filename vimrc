@@ -2,8 +2,13 @@
 set nocompatible
 execute pathogen#infect()
 
-" enable syntax highlighting
-syntax enable
+set foldmethod=indent
+
+if has('syntax') && !exists('g:syntax_on')
+  " enable syntax highlighting
+  syntax enable
+  set foldmethod=syntax
+endif
 
 filetype plugin indent on
 
@@ -26,7 +31,7 @@ else
   colorscheme peachpuff
 endif
 
-"list of good colorschemes by shade
+"list of good colorschemes by dominant color in the palette
 "BLUE
 "base16-harmonic16
 "base16-flat
@@ -57,6 +62,10 @@ set relativenumber
 set incsearch 
 " highlight matches
 set hlsearch          
+" searches are case insensitive...
+set ignorecase    
+" ... unless they contain at least one capital letter
+set smartcase     
 
 "indents
 set autoindent
@@ -81,6 +90,31 @@ endif
 
 "turn off search highlight with double space
 nnoremap <leader><space> :nohlsearch<CR>
+
+set backspace=indent,eol,start
+
+" Write swap and backup files in the event of a crash or accident
+set swapfile
+set directory=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
+set backup
+set backupdir=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
+
+" Extend our undoable steps and preserve over restart (if available)
+if has('persistent_undo')
+  set undodir=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
+  set undofile
+  set undoreload=10000
+end
+set undolevels=10000
+
+" mouse works in most terminal software we use...
+set mouse=a
+
+" fold settings
+set foldlevelstart=1
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1
 
 """"""language specific settings""""""
 
