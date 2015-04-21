@@ -49,3 +49,6 @@
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = git@github.com:mbbill/undotree.git
+[submodule "bundle/VimCompletesMe"]
+	path = bundle/VimCompletesMe
+	url = git@github.com:ajh17/VimCompletesMe.git
