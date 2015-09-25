@@ -38,3 +38,6 @@
 	path = bundle/vim-coffee-script
 	url = git@github.com:kchmck/vim-coffee-script.git
 
+[submodule "bundle/vim-hybrid-material"]
+	path = bundle/vim-hybrid-material
+	url = git@github.com:kristijanhusak/vim-hybrid-material.git

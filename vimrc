@@ -26,7 +26,7 @@ set showmatch
 "colorscheme
 set background=dark
 if has("gui_running")
-  colorscheme base16-mocha
+  colorscheme hybrid_material
 else
   colorscheme peachpuff
 endif
@@ -116,10 +116,19 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1
 
+" Remove menu options for GVim
+if has("gui_running")
+    set guioptions -=m
+    set guioptions -=T
+    set guioptions -=r
+endif
+
+" Command Sw will 'sudo write' the file
+" Useful when you forget to open the file as root
+command! Sw silent w !sudo tee %
+
 """"""language specific settings""""""
 
 "indent all parts of html
 let g:html_indent_inctags = "html,body,head,tbody" 
 
-"js code checker config for syntastic
-"let g:syntastic_javascript_checkers = ['eslint']
