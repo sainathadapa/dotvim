@@ -1,2 +1,0 @@
-- do additional configuration steps for YouCompleteMe https://github.com/Valloric/YouCompleteMe
-- 
