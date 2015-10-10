@@ -2,7 +2,7 @@
 set nocompatible
 execute pathogen#infect()
 
-set foldmethod=indent
+set foldmethod=manual
 
 if has('syntax') && !exists('g:syntax_on')
   " enable syntax highlighting
