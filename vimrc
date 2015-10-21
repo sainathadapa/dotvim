@@ -127,8 +127,8 @@ endif
 " Useful when you forget to open the file as root
 command! Sw silent w !sudo tee %
 
-""""""language specific settings""""""
-
-"indent all parts of html
+" indent all parts of html
 let g:html_indent_inctags = "html,body,head,tbody" 
 
+" use sneak as a alternative to EasyMotion
+let g:sneak#streak = 1
