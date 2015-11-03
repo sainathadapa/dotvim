@@ -99,13 +99,10 @@ set directory=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
 set backup
 set backupdir=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
 
-" Extend our undoable steps and preserve over restart (if available)
-if has('persistent_undo')
-  set undodir=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
-  set undofile
-  set undoreload=10000
-end
-set undolevels=10000
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif
 
 " mouse works in most terminal software we use...
 set mouse=a
@@ -132,3 +129,4 @@ let g:html_indent_inctags = "html,body,head,tbody"
 
 " use sneak as a alternative to EasyMotion
 let g:sneak#streak = 1
+
