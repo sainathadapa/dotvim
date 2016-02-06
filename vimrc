@@ -94,15 +94,9 @@ nnoremap <leader><space> :nohlsearch<CR>
 set backspace=indent,eol,start
 
 " Write swap and backup files in the event of a crash or accident
-set swapfile
-set directory=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
-set backup
-set backupdir=$TMPDIR,~/tmp,~/.vim/tmp,/tmp,/var/tmp
-
-if has("persistent_undo")
-    set undodir=~/.undodir/
-    set undofile
-endif
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
 
 " mouse works in most terminal software we use...
 set mouse=a
@@ -115,9 +109,10 @@ set foldlevel=1
 
 " Remove menu options for GVim
 if has("gui_running")
-    set guioptions -=m
-    set guioptions -=T
-    set guioptions -=r
+  set guioptions -=m
+  set guioptions -=T
+  set guioptions -=r
+  set guifont=Source\ Code\ Pro\ Medium\ 10
 endif
 
 " Command Sw will 'sudo write' the file
