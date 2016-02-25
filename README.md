@@ -1,1 +1,1 @@
-`git clone --recursive git@github.com:sainathadapa/vim-config.git ~/.vim`
+`git clone --recursive https://github.com/sainathadapa/vim-config.git ~/.vim`
