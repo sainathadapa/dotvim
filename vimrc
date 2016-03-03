@@ -50,12 +50,6 @@ imap <C-v> <C-r><C-o>+
 "Start undotree automatically on startup
 autocmd vimenter * UndotreeToggle
 
-"quit NERDTree after a file is opened
-let NERDTreeQuitOnOpen=1
-
-"quit vim if the NERDTree is the only window left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 "hybrid line numbering mode
 set number
 set relativenumber
