@@ -1,3 +1,5 @@
 .swp/*
 .undo/*
 .backup/*
+# Ignore the installed plugins
+plugged/**

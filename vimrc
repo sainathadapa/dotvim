@@ -1,16 +1,39 @@
 "general settings
 set nocompatible
-execute pathogen#infect()
-
 set foldmethod=manual
+set showcmd
+filetype plugin indent on
+
+"Plugins
+call plug#begin('~/.vim/plugged')
+"Make sure you use single quotes
+Plug 'tpope/vim-sensible'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-markdown'
+Plug 'gregsexton/MatchTag'
+Plug 'chriskempson/base16-vim'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'elzr/vim-json'
+Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-speeddating'
+Plug 'stephpy/vim-yaml'
+Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'kchmck/vim-coffee-script'
+Plug 'junegunn/vim-easy-align'
+Plug 'ajh17/VimCompletesMe'
+Plug 'mbbill/undotree'
+" Add plugins to &runtimepath
+call plug#end()
+
 
 if has('syntax') && !exists('g:syntax_on')
   " enable syntax highlighting
   syntax enable
   set foldmethod=syntax
 endif
-
-filetype plugin indent on
 
 "show the mode i am in
 set showmode 
@@ -123,5 +146,3 @@ let g:html_indent_inctags = "html,body,head,tbody"
 
 " use sneak as a alternative to EasyMotion
 let g:sneak#streak = 1
-
-set showcmd
