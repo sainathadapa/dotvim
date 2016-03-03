@@ -95,6 +95,9 @@ set backspace=indent,eol,start
 
 " Write swap and backup files in the event of a crash or accident
 set undodir=~/.vim/.undo//
+set undofile
+set undolevels=1000
+set undoreload=10000
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
 
