@@ -47,9 +47,11 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 
-"NERDTree on startup
-autocmd VimEnter * NERDTree | wincmd p
-set showcmd
+"Start undotree automatically on startup
+autocmd vimenter * UndotreeToggle
+
+"quit NERDTree after a file is opened
+let NERDTreeQuitOnOpen=1
 
 "quit vim if the NERDTree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -128,3 +130,4 @@ let g:html_indent_inctags = "html,body,head,tbody"
 " use sneak as a alternative to EasyMotion
 let g:sneak#streak = 1
 
+set showcmd
