@@ -8,7 +8,6 @@ filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 "Make sure you use single quotes
 Plug 'ajh17/VimCompletesMe'
-Plug 'elzr/vim-json'
 Plug 'gregsexton/MatchTag'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
