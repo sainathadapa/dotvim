@@ -70,6 +70,7 @@ imap <C-v> <C-r><C-o>+
 
 "Start undotree automatically on startup
 autocmd vimenter * UndotreeToggle
+let g:undotree_HighlightChangedText = 0
 
 "hybrid line numbering mode
 set number
