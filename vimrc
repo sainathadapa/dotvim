@@ -135,7 +135,7 @@ if has("gui_running")
   set guioptions -=m
   set guioptions -=T
   set guioptions -=r
-  set guifont=Source\ Code\ Pro\ Medium\ 10
+  set guifont=Source\ Code\ Pro\ Medium\ 12
 endif
 
 " Command Sw will 'sudo write' the file
@@ -147,3 +147,7 @@ let g:html_indent_inctags = "html,body,head,tbody"
 
 " use sneak as a alternative to EasyMotion
 let g:sneak#streak = 1
+
+" Press C-r in visual mode to replace the text highlighted
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
