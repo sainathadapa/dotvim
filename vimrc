@@ -24,7 +24,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'svermeulen/vim-easyclip'
+
 " Add plugins to &runtimepath
 call plug#end()
 
