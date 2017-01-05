@@ -51,7 +51,7 @@ set background=dark
 if has("gui_running")
   colorscheme hybrid_material
 else
-  colorscheme peachpuff
+  colorscheme desert
 endif
 
 "list of good colorschemes by dominant color in the palette
