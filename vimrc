@@ -145,9 +145,6 @@ command! Sw silent w !sudo tee %
 " indent all parts of html
 let g:html_indent_inctags = "html,body,head,tbody" 
 
-" use sneak as a alternative to EasyMotion
-let g:sneak#streak = 1
-
 " Press C-r in visual mode to replace the text highlighted
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
