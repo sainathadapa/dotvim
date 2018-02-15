@@ -1,4 +1,3 @@
-"general settings
 set nocompatible
 set foldmethod=manual
 set showcmd
@@ -7,27 +6,24 @@ filetype plugin indent on
 "Plugins
 call plug#begin('~/.vim/plugged')
 "Make sure you use single quotes
+"Plug 'gregsexton/MatchTag'
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'pangloss/vim-javascript'
 Plug 'ajh17/VimCompletesMe'
-Plug 'gregsexton/MatchTag'
+Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'kchmck/vim-coffee-script'
-Plug 'easymotion/vim-easymotion'
 Plug 'kien/ctrlp.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'mbbill/undotree'
-Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-
-" Add plugins to &runtimepath
 call plug#end()
-
 
 if has('syntax') && !exists('g:syntax_on')
   " enable syntax highlighting
@@ -54,16 +50,6 @@ else
   colorscheme desert
 endif
 
-"list of good colorschemes by dominant color in the palette
-"BLUE
-"base16-harmonic16
-"base16-flat
-"base16-ocean
-"
-"BROWN
-"base16-eighties
-"base16-mocha
-
 "configuring normal os key combinations for cut, copy, paste
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -71,8 +57,8 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 
 "Start undotree automatically on startup
-autocmd vimenter * UndotreeToggle
-let g:undotree_HighlightChangedText = 0
+"autocmd vimenter * UndotreeToggle
+"let g:undotree_HighlightChangedText = 0
 
 "hybrid line numbering mode
 set number
@@ -103,11 +89,6 @@ let mapleader = "\<Space>"
 nnoremap ; :
 nnoremap : ;
 
-"enable neocomplete
-if has("gui_running")
-  let g:neocomplete#enable_at_startup = 1
-endif
-
 "turn off search highlight with double space
 nnoremap <leader><space> :nohlsearch<CR>
 
@@ -125,10 +106,10 @@ set directory=~/.vim/.swp//
 set mouse=a
 
 " fold settings
-set foldlevelstart=1
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldlevel=1
+" set foldlevelstart=1
+" set foldnestmax=10      "deepest fold is 10 levels
+" set nofoldenable        "dont fold by default
+" set foldlevel=1
 
 " Remove menu options for GVim
 if has("gui_running")
@@ -138,13 +119,9 @@ if has("gui_running")
   set guifont=Source\ Code\ Pro\ Medium\ 12
 endif
 
-" Command Sw will 'sudo write' the file
-" Useful when you forget to open the file as root
-command! Sw silent w !sudo tee %
-
 " indent all parts of html
-let g:html_indent_inctags = "html,body,head,tbody" 
+" let g:html_indent_inctags = "html,body,head,tbody" 
 
 " Press C-r in visual mode to replace the text highlighted
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+" vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
