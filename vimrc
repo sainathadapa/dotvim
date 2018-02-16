@@ -6,16 +6,20 @@ filetype plugin indent on
 "Plugins
 call plug#begin('~/.vim/plugged')
 "Make sure you use single quotes
+"Plug 'ajh17/VimCompletesMe'
 "Plug 'gregsexton/MatchTag'
 "Plug 'kchmck/vim-coffee-script'
 "Plug 'pangloss/vim-javascript'
-Plug 'ajh17/VimCompletesMe'
+Plug 'Shougo/deoplete.nvim'
+Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'mbbill/undotree'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'scrooloose/nerdcommenter'
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-markdown'
@@ -23,6 +27,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
+Plug 'zchee/deoplete-jedi'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -35,6 +41,8 @@ endif
 set showmode 
 
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
+" python special settings
+au FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 " show a visual line under the cursor's current line 
 set cursorline
@@ -124,4 +132,6 @@ endif
 
 " Press C-r in visual mode to replace the text highlighted
 " vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+let g:deoplete#enable_at_startup = 1
 
