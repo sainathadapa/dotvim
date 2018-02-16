@@ -3,3 +3,5 @@
 .backup/*
 # Ignore the installed plugins
 plugged/**
+.netrwhist
+
