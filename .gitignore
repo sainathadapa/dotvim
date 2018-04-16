@@ -4,4 +4,5 @@
 # Ignore the installed plugins
 plugged/**
 .netrwhist
+tmp
 
