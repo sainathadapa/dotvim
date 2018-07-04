@@ -31,6 +31,9 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale' "Syntax checking
 Plug 'zchee/deoplete-jedi'
 Plug 'luochen1990/rainbow'
+Plug 'zefei/vim-colortuner'
+Plug 'unblevable/quick-scope'
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
