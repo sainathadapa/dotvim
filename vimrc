@@ -45,9 +45,26 @@ endif
 "show the mode i am in
 set showmode 
 
+" tab and space settings
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
 " python special settings
 au FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+" Enable rainbow parentheses
+let g:rainbow_active = 1
+
+" vim-hybrid-material theme settings
+" Bold functions, etc
+let g:enable_bold_font = 1
+" comments in italic
+let g:enable_italic_font = 1
+
+" By default python-mode uses python 2 syntax checking. To enable python 3 syntax checking
+let g:pymode_python = 'python3'
+" don't use rope completion for python
+let g:pymode_rope_complete_on_dot = 0
+" disable colorcolumn display at maxlength
+let g:pymode_options_colorcolumn = 0
 
 " show a visual line under the cursor's current line 
 set cursorline
