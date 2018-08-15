@@ -4,6 +4,11 @@ set foldmethod=manual
 set showcmd
 filetype plugin indent on
 
+set pyxversion=3
+let g:python_host_prog = "/usr/bin/python2"
+let g:python3_host_prog = "/usr/bin/python3"
+let g:deoplete#enable_at_startup = 1
+
 "Plugins
 call plug#begin('~/.vim/plugged')
 "Make sure you use single quotes
@@ -34,6 +39,7 @@ Plug 'luochen1990/rainbow'
 Plug 'zefei/vim-colortuner'
 Plug 'unblevable/quick-scope'
 Plug 'machakann/vim-highlightedyank'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -230,4 +236,7 @@ set scrolloff=5
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 	runtime! macros/matchit.vim
 endif
+
+"NERDTree on startup
+autocmd VimEnter * NERDTree | wincmd p
 
