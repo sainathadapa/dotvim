@@ -4,10 +4,10 @@ set foldmethod=manual
 set showcmd
 filetype plugin indent on
 
+" Python binary paths
 set pyxversion=3
 let g:python_host_prog = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python3"
-let g:deoplete#enable_at_startup = 1
 
 "Plugins
 call plug#begin('~/.vim/plugged')
@@ -156,8 +156,9 @@ if !isdirectory(&viewdir)   | call mkdir(&viewdir, 'p', 0700)   | endif
 " and "Can I be notified when I'm undoing changes from the undofile?":
 " https://vi.stackexchange.com/q/2115/51.
 if has('persistent_undo')
-	set undodir=$HOME/.vim/tmp/undo
-	if !isdirectory(&undodir) | call mkdir(&undodir, 'p', 0700) | endif
+  set undofile " Maintain undo history between sessions
+  set undodir=$HOME/.vim/tmp/undo
+  if !isdirectory(&undodir) | call mkdir(&undodir, 'p', 0700) | endif
   set undolevels=1000
   set undoreload=10000
 endif
