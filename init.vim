@@ -1,17 +1,7 @@
-" vim-hybrid-material theme settings
-" Bold functions, etc
-let g:enable_bold_font = 1
-" comments in italic
-let g:enable_italic_font = 1
-
-set encoding=utf-8
-set nocompatible
 set foldmethod=manual
-set showcmd
-filetype plugin indent on
 
 "Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 "Make sure you use single quotes
 "Plug 'ajh17/VimCompletesMe'
 "Plug 'gregsexton/MatchTag'
@@ -78,12 +68,7 @@ set cursorline
 set showmatch
 
 "colorscheme
-if has("gui_running")
-  set background=dark
-  colorscheme hybrid_material
-else
-  colorscheme desert
-endif
+colorscheme desert
 
 "configuring normal os key combinations for cut, copy, paste
 vmap <C-c> "+yi
@@ -139,10 +124,10 @@ set backspace=indent,eol,start
 " the current directory next to the original file usually isn’t.
 "
 " With this enabled Vim will store all these files in the user’s home directory.
-set viminfo+=n~/.vim/tmp/viminfo
-set backupdir=$HOME/.vim/tmp/backup
-set dir=$HOME/.vim/tmp/swap
-set viewdir=$HOME/.vim/tmp/view
+set viminfo+=n~/.config/nvim/tmp/viminfo
+set backupdir=$HOME/.config/nvim/tmp/backup
+set dir=$HOME/.config/nvim/tmp/swap
+set viewdir=$HOME/.config/nvim/tmp/view
 if !isdirectory(&backupdir) | call mkdir(&backupdir, 'p', 0700) | endif
 if !isdirectory(&dir)       | call mkdir(&dir, 'p', 0700)       | endif
 if !isdirectory(&viewdir)   | call mkdir(&viewdir, 'p', 0700)   | endif
@@ -155,7 +140,7 @@ if !isdirectory(&viewdir)   | call mkdir(&viewdir, 'p', 0700)   | endif
 " https://vi.stackexchange.com/q/2115/51.
 if has('persistent_undo')
   set undofile " Maintain undo history between sessions
-  set undodir=$HOME/.vim/tmp/undo
+  set undodir=$HOME/.config/nvim/tmp/undo
   if !isdirectory(&undodir) | call mkdir(&undodir, 'p', 0700) | endif
   set undolevels=1000
   set undoreload=10000
