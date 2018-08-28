@@ -4,11 +4,6 @@ set foldmethod=manual
 set showcmd
 filetype plugin indent on
 
-" Python binary paths
-set pyxversion=3
-let g:python_host_prog = "/usr/bin/python2"
-let g:python3_host_prog = "/usr/bin/python3"
-
 "Plugins
 call plug#begin('~/.vim/plugged')
 "Make sure you use single quotes
