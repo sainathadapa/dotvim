@@ -35,6 +35,7 @@ Plug 'zefei/vim-colortuner'
 Plug 'unblevable/quick-scope'
 Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
