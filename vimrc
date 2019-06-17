@@ -109,7 +109,6 @@ set smartcase
 
 "indents
 set autoindent
-set smartindent
 
 " folding enable
 if has("folding")
