@@ -172,8 +172,11 @@ if has("gui_running")
   set guioptions -=m
   set guioptions -=T
   set guioptions -=r
-  set guifont=Source\ Code\ Pro\ Medium\ 12
+  "set guifont=Source\ Code\ Pro\ Medium\ 12
 endif
+set guifont=Source_Code_Pro_Medium:h12:cDEFAULT
+"set guifont=Consolas:h11:cANSI
+"set guifont=Source\ Code\ Pro\ 12
 
 " indent all parts of html
 " let g:html_indent_inctags = "html,body,head,tbody" 
