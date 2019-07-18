@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'gregsexton/MatchTag'
 "Plug 'kchmck/vim-coffee-script'
 "Plug 'pangloss/vim-javascript'
-Plug 'Shougo/deoplete.nvim'
+"Plug 'Shougo/deoplete.nvim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -19,8 +19,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'mbbill/undotree'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+"Plug 'roxma/nvim-yarp'
+"Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'scrooloose/nerdcommenter'
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-markdown'
@@ -29,13 +29,15 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale' "Syntax checking
-Plug 'zchee/deoplete-jedi'
+"Plug 'zchee/deoplete-jedi'
 Plug 'luochen1990/rainbow'
 Plug 'zefei/vim-colortuner'
 Plug 'unblevable/quick-scope'
 Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'nelstrom/vim-visual-star-search'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -182,7 +184,7 @@ endif
 " vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Activate deoplete
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 " Activate rainbow parentheses
 let g:rainbow_active = 1
@@ -234,5 +236,7 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 endif
 
 "NERDTree on startup
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
+
+set statusline^=%{coc#status()}
 
