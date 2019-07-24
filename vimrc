@@ -1,3 +1,9 @@
+" vim-hybrid-material theme settings
+" Bold functions, etc
+let g:enable_bold_font = 1
+" comments in italic
+let g:enable_italic_font = 1
+
 set encoding=utf-8
 set nocompatible
 set foldmethod=manual
@@ -56,12 +62,6 @@ au FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 " Enable rainbow parentheses
 let g:rainbow_active = 1
-
-" vim-hybrid-material theme settings
-" Bold functions, etc
-let g:enable_bold_font = 1
-" comments in italic
-let g:enable_italic_font = 1
 
 " By default python-mode uses python 2 syntax checking. To enable python 3 syntax checking
 let g:pymode_python = 'python3'
