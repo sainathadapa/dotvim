@@ -42,7 +42,7 @@ Plug 'unblevable/quick-scope'
 Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
-"Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'joshdick/onedark.vim'
 call plug#end()
