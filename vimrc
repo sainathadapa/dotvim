@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'gregsexton/MatchTag'
 "Plug 'kchmck/vim-coffee-script'
 "Plug 'pangloss/vim-javascript'
-"Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -25,8 +25,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'mbbill/undotree'
-"Plug 'roxma/nvim-yarp'
-"Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'scrooloose/nerdcommenter'
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-markdown'
@@ -35,15 +35,16 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale' "Syntax checking
-"Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi'
 Plug 'luochen1990/rainbow'
 Plug 'zefei/vim-colortuner'
 Plug 'unblevable/quick-scope'
 Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -238,6 +239,12 @@ endif
 "NERDTree on startup
 "autocmd VimEnter * NERDTree | wincmd p
 
+" Re-select previously yanked text
+nnoremap gb `[v`]
+
+" https://old.reddit.com/r/vim/comments/c9s2ax/shared_clipboard_is_great/
+set clipboard^=unnamedplus
+
 " coc.nvim configuration ------------------
 
 " if hidden is not set, TextEdit might fail.
@@ -367,3 +374,4 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
