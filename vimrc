@@ -34,7 +34,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
-"Plug 'w0rp/ale' "Syntax checking
+Plug 'w0rp/ale' "Syntax checking
 "Plug 'zchee/deoplete-jedi'
 Plug 'luochen1990/rainbow'
 Plug 'zefei/vim-colortuner'
