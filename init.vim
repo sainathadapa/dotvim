@@ -16,7 +16,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'mbbill/undotree'
 Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'scrooloose/nerdcommenter'
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-markdown'
@@ -34,7 +33,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'joshdick/onedark.vim'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -68,7 +66,12 @@ set cursorline
 set showmatch
 
 "colorscheme
-colorscheme desert
+if has("gui_running")
+  set background=dark
+  colorscheme hybrid_material
+else
+  colorscheme desert
+endif
 
 "configuring normal os key combinations for cut, copy, paste
 vmap <C-c> "+yi
