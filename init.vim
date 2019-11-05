@@ -65,13 +65,7 @@ set cursorline
 " show the matching part of the pair for [] {} and ()
 set showmatch
 
-"colorscheme
-if has("gui_running")
-  set background=dark
-  colorscheme hybrid_material
-else
-  colorscheme desert
-endif
+colorscheme hybrid_material
 
 "configuring normal os key combinations for cut, copy, paste
 vmap <C-c> "+yi
@@ -159,12 +153,8 @@ set mouse=a
 " set foldlevel=1
 
 " Remove menu options for GVim
-if has("gui_running")
-  set guioptions -=m
-  set guioptions -=T
-  set guioptions -=r
-  set guifont=Source\ Code\ Pro\ Medium\ 12
-endif
+set guifont=Source\ Code\ Pro\ Medium:h12
+" set guifont=Fira\ Code\ Medium:h13
 
 " indent all parts of html
 " let g:html_indent_inctags = "html,body,head,tbody" 
