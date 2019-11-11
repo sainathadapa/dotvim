@@ -1,9 +1,3 @@
 {
-  "suggest.enablePreview": true,
-  "python.linting.mypyArgs": [
-    "--ignore-missing-imports",
-    "--follow-imports=silent",
-    "--show-column-numbers"
-  ],
-  "python.analysis.disabled": ["unresolved-import"]
+  "suggest.enablePreview": true
 }
