@@ -3,36 +3,28 @@ set foldmethod=manual
 "Plugins
 call plug#begin('~/.config/nvim/plugged')
 "Make sure you use single quotes
-"Plug 'ajh17/VimCompletesMe'
-"Plug 'gregsexton/MatchTag'
-"Plug 'kchmck/vim-coffee-script'
-"Plug 'pangloss/vim-javascript'
-Plug 'Shougo/deoplete.nvim'
-Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'Vimjas/vim-python-pep8-indent' "modifies Vim’s indentation behavior to comply with PEP8
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kien/ctrlp.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'luochen1990/rainbow'
+Plug 'machakann/vim-highlightedyank' "highlight the yanked region
 Plug 'mbbill/undotree'
-Plug 'roxma/nvim-yarp'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'} "Autocomplete plugin
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale' "Syntax checking
-Plug 'zchee/deoplete-jedi'
-Plug 'luochen1990/rainbow'
-Plug 'zefei/vim-colortuner'
-Plug 'unblevable/quick-scope'
-Plug 'machakann/vim-highlightedyank'
-Plug 'scrooloose/nerdtree'
-Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-Plug 'nelstrom/vim-visual-star-search'
+Plug 'unblevable/quick-scope' "Highlights some characters to help with f/F/t/T motions
+Plug 'zefei/vim-colortuner' "Adjust colors using sliders, :Colortuner
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -224,6 +216,16 @@ nnoremap gb `[v`]
 set clipboard^=unnamedplus
 
 " coc.nvim configuration ------------------
+
+let g:coc_global_extensions = [
+  \ 'coc-pairs',
+  \ 'coc-prettier',
+  \ 'coc-json',
+  \ 'coc-yaml',
+  \ 'coc-markdownlint',
+  \ 'coc-python',
+  \ 'coc-r-lsp',
+  \ ]
 
 " if hidden is not set, TextEdit might fail.
 set hidden
