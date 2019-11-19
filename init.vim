@@ -136,7 +136,7 @@ if has('persistent_undo')
 endif
 
 " mouse works in most terminal software we use...
-set mouse=a
+set mouse+=a
 
 " fold settings
 " set foldlevelstart=1
