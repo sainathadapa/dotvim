@@ -180,11 +180,25 @@ set display=lastline
 " (after you type :) behave more useful and roughly like most shells do.
 "
 " See 'wildmode' on how to configure the completion mode to your liking.
-" 'wildignore' is also a useful setting to ignore binary files such as compiler
-" output, images, etc.
 set wildmenu
 
 set wildmode=list:longest  " List all matches and complete to the longest match.
+
+" 'wildignore' is useful setting to ignore binary files such as compiler
+" output, images, etc.
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+" Ignore some files for ctrlp completion
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+" Ignore files in .gitignore for ctrlp completion
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Remove octal support from 'nrformats'.  This controls how Vim should
 " interpret numbers when pressing |CTRL-A| or |CTRL-X| to increment to decrement
