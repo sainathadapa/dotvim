@@ -4,6 +4,7 @@ set foldmethod=manual
 call plug#begin('~/.config/nvim/plugged')
 "Make sure you use single quotes
 Plug 'Vimjas/vim-python-pep8-indent' "modifies Vim’s indentation behavior to comply with PEP8
+Plug 'Xuyuanp/nerdtree-git-plugin' "Adds git status indicator to the nerdtree
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
