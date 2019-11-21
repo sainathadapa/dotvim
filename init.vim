@@ -8,7 +8,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin' "Adds git status indicator to the nerdtree
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim' "Ctrl-p shortcut to find files
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'luochen1990/rainbow'
 Plug 'machakann/vim-highlightedyank' "highlight the yanked region
