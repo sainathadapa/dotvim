@@ -16,7 +16,7 @@ Plug 'mbbill/undotree'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'} "Autocomplete plugin
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree' "Filetree
 Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-markdown'
@@ -209,6 +209,9 @@ endif
 
 "NERDTree on startup
 "autocmd VimEnter * NERDTree | wincmd p
+
+"Shortcut to toggle NERDTree
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Re-select previously yanked text
 nnoremap gb `[v`]
