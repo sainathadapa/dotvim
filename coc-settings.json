@@ -4,5 +4,6 @@
   "markdownlint.config": {
     "default": true,
     "line_length": false
-  }
+  },
+  "coc.preferences.colorSupport": true
 }
