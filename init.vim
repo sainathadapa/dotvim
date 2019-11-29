@@ -237,6 +237,7 @@ set clipboard^=unnamedplus
 
 let g:coc_global_extensions = [
   \ 'coc-pairs',
+  \ 'coc-highlight',
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-yaml',
