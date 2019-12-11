@@ -109,6 +109,17 @@ nnoremap <leader><space> :nohlsearch<CR>
 " indentation, or previously inserted text.
 set backspace=indent,eol,start
 
+" netrw settings
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
+
 " Store temporary files in ~/.vim/tmp  By default Vim will store various
 " files in the current directory. These files are useful, but storing them in
 " the current directory next to the original file usually isn’t.
