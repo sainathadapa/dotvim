@@ -10,7 +10,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ctrlpvim/ctrlp.vim' "Ctrl-p shortcut to find files
 Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'luochen1990/rainbow'
+Plug 'luochen1990/rainbow' "Rainbow parentheses
 Plug 'machakann/vim-highlightedyank' "highlight the yanked region
 Plug 'mbbill/undotree'
 Plug 'nelstrom/vim-visual-star-search'
@@ -26,6 +26,8 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope' "Highlights some characters to help with f/F/t/T motions
 Plug 'zefei/vim-colortuner' "Adjust colors using sliders, :Colortuner
+Plug 'airblade/vim-rooter' "Automatically change directory based on file directory
+Plug 'axvr/org.vim'  "Org-mode syntax highlighting
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -59,6 +61,10 @@ set cursorline
 set showmatch
 
 colorscheme hybrid_material
+
+" Make comments appear in italics
+" from https://rsapkf.netlify.com/blog/enabling-italics-vim-tmux
+highlight Comment cterm=italic
 
 "configuring normal os key combinations for cut, copy, paste
 vmap <C-c> "+yi
@@ -115,10 +121,10 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
+"augroup ProjectDrawer
+"  autocmd!
+"  autocmd VimEnter * :Vexplore
+"augroup END
 
 " Store temporary files in ~/.vim/tmp  By default Vim will store various
 " files in the current directory. These files are useful, but storing them in
@@ -156,8 +162,8 @@ set mouse+=a
 " set nofoldenable        "dont fold by default
 " set foldlevel=1
 
-" Remove menu options for GVim
-set guifont=Source\ Code\ Pro\ Medium:h12
+" Font
+" set guifont=Source\ Code\ Pro\ Medium:h12
 " set guifont=Fira\ Code\ Medium:h13
 
 " indent all parts of html
