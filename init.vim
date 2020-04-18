@@ -44,6 +44,16 @@ set tabstop=2 softtabstop=0 expandtab shiftwidth=2
 " python special settings
 au FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
+" Mac shortcuts
+if has("gui_vimr")
+  " clear highlighting
+  nnoremap <silent> <D-l> :nohlsearch<CR><D-l>
+  " default key for CtrlP
+  let g:ctrlp_map = '<D-p>'
+  " Ctrl-v to Cmd-v
+  nnoremap <silent> <D-v> <C-v>
+endif
+
 " Enable rainbow parentheses
 let g:rainbow_active = 1
 
@@ -67,10 +77,10 @@ colorscheme hybrid_material
 highlight Comment cterm=italic
 
 "configuring normal os key combinations for cut, copy, paste
-vmap <C-c> "+yi
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <C-r><C-o>+
+"vmap <C-c> "+yi
+"vmap <C-x> "+c
+"vmap <C-v> c<ESC>"+p
+"imap <C-v> <C-r><C-o>+
 
 "Start undotree automatically on startup
 "autocmd vimenter * UndotreeToggle
@@ -84,8 +94,6 @@ set relativenumber
 set incsearch 
 " highlight matches
 set hlsearch          
-" clear highlighting
-nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " searches are case insensitive...
 set ignorecase    
 " ... unless they contain at least one capital letter
@@ -242,7 +250,7 @@ endif
 "autocmd VimEnter * NERDTree | wincmd p
 
 "Shortcut to toggle NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
+"nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Re-select previously yanked text
 nnoremap gb `[v`]
