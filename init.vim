@@ -10,6 +10,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ctrlpvim/ctrlp.vim' "Ctrl-p shortcut to find files
 Plug 'kristijanhusak/vim-hybrid-material'
+"Plug 'chuling/vim-equinusocio-material' "Another material colorscheme
 Plug 'luochen1990/rainbow' "Rainbow parentheses
 Plug 'machakann/vim-highlightedyank' "highlight the yanked region
 Plug 'mbbill/undotree'
@@ -163,7 +164,7 @@ set mouse+=a
 " set foldlevel=1
 
 " Font
-" set guifont=Source\ Code\ Pro\ Medium:h12
+set guifont=Source\ Code\ Pro\ Medium:h12
 " set guifont=Fira\ Code\ Medium:h13
 
 " indent all parts of html
