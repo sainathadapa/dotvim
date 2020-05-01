@@ -52,6 +52,10 @@ if has("gui_vimr")
   let g:ctrlp_map = '<D-p>'
   " Ctrl-v to Cmd-v
   nnoremap <silent> <D-v> <C-v>
+  nnoremap <C-v> <Nop>
+  " Ctrl-w to Cmd-w
+  nnoremap <silent> <D-w> <C-w>
+  nnoremap <C-w> <Nop>
 endif
 
 " Enable rainbow parentheses
