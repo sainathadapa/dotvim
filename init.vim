@@ -9,12 +9,13 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ctrlpvim/ctrlp.vim' "Ctrl-p shortcut to find files
-Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'kristijanhusak/vim-hybrid-material' "theme
+Plug 'NLKNguyen/papercolor-theme' "theme
 Plug 'luochen1990/rainbow' "Rainbow parentheses
 Plug 'machakann/vim-highlightedyank' "highlight the yanked region
 Plug 'mbbill/undotree'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'} "Autocomplete plugin
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete plugin
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree' "Filetree
 Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
@@ -74,7 +75,9 @@ set cursorline
 " show the matching part of the pair for [] {} and ()
 set showmatch
 
-colorscheme hybrid_material
+set background=light
+colorscheme PaperColor
+"colorscheme hybrid_material
 
 " Make comments appear in italics
 " from https://rsapkf.netlify.com/blog/enabling-italics-vim-tmux
