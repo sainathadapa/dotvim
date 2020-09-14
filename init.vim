@@ -29,6 +29,8 @@ Plug 'unblevable/quick-scope' "Highlights some characters to help with f/F/t/T m
 Plug 'zefei/vim-colortuner' "Adjust colors using sliders, :Colortuner
 Plug 'airblade/vim-rooter' "Automatically change directory based on file directory
 Plug 'axvr/org.vim'  "Org-mode syntax highlighting
+Plug 'wellle/context.vim'  "Show the context (e.g. function's first line)
+Plug 'terryma/vim-expand-region' "expand visual selection incrementally (use the + key)
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -265,6 +267,10 @@ nnoremap gb `[v`]
 " https://old.reddit.com/r/vim/comments/c9s2ax/shared_clipboard_is_great/
 set clipboard^=unnamedplus
 
+" wellle/context.vim is disabled by default
+" :ContextToggle to toggle it on demand
+let g:context_enabled = 0
+
 " coc.nvim configuration ------------------
 
 let g:coc_global_extensions = [
@@ -276,6 +282,7 @@ let g:coc_global_extensions = [
   \ 'coc-markdownlint',
   \ 'coc-python',
   \ 'coc-r-lsp',
+  \ 'coc-java',
   \ ]
 
 " if hidden is not set, TextEdit might fail.
