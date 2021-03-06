@@ -31,6 +31,7 @@ Plug 'airblade/vim-rooter' "Automatically change directory based on file directo
 Plug 'axvr/org.vim'  "Org-mode syntax highlighting
 Plug 'wellle/context.vim'  "Show the context (e.g. function's first line)
 Plug 'terryma/vim-expand-region' "expand visual selection incrementally (use the + key)
+Plug 'gennaro-tedesco/nvim-peekup'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -41,6 +42,9 @@ endif
 
 "show the mode i am in
 set showmode 
+
+" Use a visual bell instead of beeping
+set visualbell
 
 " tab and space settings
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
@@ -283,6 +287,7 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-r-lsp',
   \ 'coc-java',
+  \ 'coc-sql',
   \ ]
 
 " if hidden is not set, TextEdit might fail.
