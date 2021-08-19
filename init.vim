@@ -5,8 +5,9 @@ call plug#begin('~/.config/nvim/plugged')
 "Make sure you use single quotes
 Plug 'Vimjas/vim-python-pep8-indent' "modifies Vim’s indentation behavior to comply with PEP8
 Plug 'Xuyuanp/nerdtree-git-plugin' "Adds git status indicator to the nerdtree
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'ggandor/lightspeed.nvim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ctrlpvim/ctrlp.vim' "Ctrl-p shortcut to find files
 Plug 'kristijanhusak/vim-hybrid-material' "theme
@@ -32,6 +33,7 @@ Plug 'axvr/org.vim'  "Org-mode syntax highlighting
 Plug 'wellle/context.vim'  "Show the context (e.g. function's first line)
 Plug 'terryma/vim-expand-region' "expand visual selection incrementally (use the + key)
 Plug 'gennaro-tedesco/nvim-peekup'
+"Plug 'kristijanhusak/orgmode.nvim'
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
