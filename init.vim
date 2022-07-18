@@ -129,6 +129,11 @@ let mapleader = "\<Space>"
 nnoremap ; :
 nnoremap : ;
 
+" change the direction of new splits
+" https://vimtricks.com/p/open-splits-more-naturally/
+set splitbelow
+set splitright
+
 "turn off search highlight with double space
 nnoremap <leader><space> :nohlsearch<CR>
 
@@ -200,6 +205,9 @@ set mouse+=a
 
 " Activate rainbow parentheses
 let g:rainbow_active = 1
+
+" To use fzf in vim
+set rtp+=/usr/local/opt/fzf
 
 " python linter for ale
 let g:ale_linters = {'python': ['flake8']}
