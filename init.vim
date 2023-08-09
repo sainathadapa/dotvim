@@ -1,34 +1,37 @@
 set foldmethod=manual
 
 "Plugins
-call plug#begin('~/.config/nvim/plugged')
 "Make sure you use single quotes
+call plug#begin('~/.config/nvim/plugged')
+Plug 'tpope/vim-sensible' "a universal set of defaults that everyone can agree on
 Plug 'Vimjas/vim-python-pep8-indent' "modifies Vim’s indentation behavior to comply with PEP8
-Plug 'Xuyuanp/nerdtree-git-plugin' "Adds git status indicator to the nerdtree
-Plug 'easymotion/vim-easymotion'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'junegunn/vim-easy-align'
+"Plug 'easymotion/vim-easymotion'
+"Plug 'junegunn/vim-easy-align'  "
 Plug 'ctrlpvim/ctrlp.vim' "Ctrl-p shortcut to find files
-Plug 'kristijanhusak/vim-hybrid-material'
-"Plug 'chuling/vim-equinusocio-material' "Another material colorscheme
+Plug 'kristijanhusak/vim-hybrid-material' "theme
+"Plug 'NLKNguyen/papercolor-theme' "theme
+"Plug 'junegunn/rainbow_parentheses.vim'  "Different colors for different bracket pairs
 Plug 'luochen1990/rainbow' "Rainbow parentheses
 Plug 'machakann/vim-highlightedyank' "highlight the yanked region
 Plug 'mbbill/undotree'
-Plug 'nelstrom/vim-visual-star-search'
+Plug 'nelstrom/vim-visual-star-search' "This allows you to select some text using Vim's visual mode and then hit * and # to search for it elsewhere in the file.  For example, hit V, select a strange sequence of characters and hit star.  You'll find all other runs in the file.
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete plugin
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree' "Filetree
+"Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdtree' "Filetree
 Plug 'sheerun/vim-polyglot' "Add syntax highlighting for almost any language
 Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating' "for incrementing dates
+Plug 'tpope/vim-surround' "cs<doublequote><singlequote> to change a pair of double quotes to single quotes
 Plug 'unblevable/quick-scope' "Highlights some characters to help with f/F/t/T motions
-Plug 'zefei/vim-colortuner' "Adjust colors using sliders, :Colortuner
+"Plug 'zefei/vim-colortuner' "Adjust colors using sliders, :Colortuner
 Plug 'airblade/vim-rooter' "Automatically change directory based on file directory
 Plug 'axvr/org.vim'  "Org-mode syntax highlighting
+"Plug 'kristijanhusak/orgmode.nvim'
+Plug 'wellle/context.vim'  "Show the context (e.g. function's first line)
+"Plug 'terryma/vim-expand-region' "expand visual selection incrementally (use the + key)
+Plug 'gennaro-tedesco/nvim-peekup' "Open the peekup window with the default keymapping <double quote><double quote>. Scroll and browse the list of registers ordered by type and select the register you want by simply pressing the corresponding character (letter or number, no need to prepend <duoble quote>): you receive visual confirmation for your choice and the text is copied into the default register. The peekup window automatically closes and you can now easily put (p) your yanked text anywhere you want.
 call plug#end()
 
 if has('syntax') && !exists('g:syntax_on')
@@ -39,6 +42,9 @@ endif
 
 "show the mode i am in
 set showmode 
+
+" Use a visual bell instead of beeping
+set visualbell
 
 " tab and space settings
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
@@ -85,8 +91,6 @@ set relativenumber
 set incsearch 
 " highlight matches
 set hlsearch          
-" clear highlighting
-nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " searches are case insensitive...
 set ignorecase    
 " ... unless they contain at least one capital letter
@@ -106,6 +110,11 @@ let mapleader = "\<Space>"
 "switch : and ;
 nnoremap ; :
 nnoremap : ;
+
+" change the direction of new splits
+" https://vimtricks.com/p/open-splits-more-naturally/
+set splitbelow
+set splitright
 
 "turn off search highlight with double space
 nnoremap <leader><space> :nohlsearch<CR>
@@ -164,7 +173,7 @@ set mouse+=a
 " set foldlevel=1
 
 " Font
-set guifont=Source\ Code\ Pro\ Medium:h12
+" set guifont=Source\ Code\ Pro\ Medium:h12
 " set guifont=Fira\ Code\ Medium:h13
 
 " indent all parts of html
@@ -178,6 +187,9 @@ set guifont=Source\ Code\ Pro\ Medium:h12
 
 " Activate rainbow parentheses
 let g:rainbow_active = 1
+
+" To use fzf in vim
+"set rtp+=/usr/local/opt/fzf
 
 " python linter for ale
 let g:ale_linters = {'python': ['flake8']}
@@ -243,13 +255,17 @@ endif
 "autocmd VimEnter * NERDTree | wincmd p
 
 "Shortcut to toggle NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
+"nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Re-select previously yanked text
 nnoremap gb `[v`]
 
 " https://old.reddit.com/r/vim/comments/c9s2ax/shared_clipboard_is_great/
 set clipboard^=unnamedplus
+
+" wellle/context.vim is disabled by default
+" :ContextToggle to toggle it on demand
+let g:context_enabled = 0
 
 " coc.nvim configuration ------------------
 
@@ -263,10 +279,10 @@ let g:coc_global_extensions = [
   \ 'coc-python'
   \ ]
 
+
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
 set encoding=utf-8
-
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
