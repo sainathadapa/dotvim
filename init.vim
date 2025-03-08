@@ -294,7 +294,7 @@ let g:coc_global_extensions = [
   \ 'coc-markdownlint',
   \ 'coc-python',
   \ 'coc-java',
-  \ 'coc-sql',
+  \ 'coc-sql'
   \ ]
 
 
