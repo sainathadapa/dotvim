@@ -27,7 +27,6 @@ return {
   },
   {
     "airblade/vim-rooter",
-    event = "VeryLazy",
   },
   {
     "axvr/org.vim",
