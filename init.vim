@@ -285,6 +285,9 @@ let g:context_enabled = 0
 
 " coc.nvim configuration ------------------
 
+" Keep Coc on an LTS Node runtime; newer Node releases can break extension startup.
+let g:coc_node_path = '/Users/sainatha/homebrew/opt/node@24/bin/node'
+
 let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-highlight',
@@ -458,4 +461,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
