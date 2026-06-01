@@ -1,5 +1,7 @@
 local g = vim.g
 local opt = vim.opt
+local home = vim.env.HOME or ""
+local tmp_root = vim.fs.joinpath(home, ".config", "nvim", "tmp")
 
 g.mapleader = " "
 g.maplocalleader = " "
@@ -47,8 +49,8 @@ opt.background = "light"
 opt.undofile = true
 opt.undolevels = 1000
 opt.undoreload = 10000
-opt.backupdir = vim.fn.expand("$HOME/.config/nvim/tmp/backup//")
-opt.directory = vim.fn.expand("$HOME/.config/nvim/tmp/swap//")
-opt.viewdir = vim.fn.expand("$HOME/.config/nvim/tmp/view//")
-opt.undodir = vim.fn.expand("$HOME/.config/nvim/tmp/undo//")
-opt.shadafile = vim.fn.expand("$HOME/.config/nvim/tmp/main.shada")
+opt.backupdir = vim.fs.joinpath(tmp_root, "backup") .. "//"
+opt.directory = vim.fs.joinpath(tmp_root, "swap") .. "//"
+opt.viewdir = vim.fs.joinpath(tmp_root, "view") .. "//"
+opt.undodir = vim.fs.joinpath(tmp_root, "undo") .. "//"
+opt.shadafile = vim.fs.joinpath(tmp_root, "main.shada")
