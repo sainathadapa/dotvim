@@ -1,4 +1,5 @@
 local M = {}
+local has_go = vim.fn.executable("go") == 1
 
 M.capabilities = require("blink.cmp").get_lsp_capabilities()
 
@@ -73,7 +74,10 @@ M.servers = {
     },
   },
   marksman = {},
-  sqls = {},
 }
+
+if has_go then
+  M.servers.sqls = {}
+end
 
 return M

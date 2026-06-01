@@ -1,3 +1,17 @@
+local has_go = vim.fn.executable("go") == 1
+local lsp_servers = {
+  "lua_ls",
+  "pyright",
+  "jsonls",
+  "yamlls",
+  "marksman",
+}
+
+-- Mason installs sqls through Go, so only enable it when Go is available.
+if has_go then
+  table.insert(lsp_servers, "sqls")
+end
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -106,14 +120,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "pyright",
-          "jsonls",
-          "yamlls",
-          "marksman",
-          "sqls",
-        },
+        ensure_installed = lsp_servers,
         automatic_enable = false,
       })
     end,
