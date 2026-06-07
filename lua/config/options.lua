@@ -2,9 +2,14 @@ local g = vim.g
 local opt = vim.opt
 local home = vim.env.HOME or ""
 local tmp_root = vim.fs.joinpath(home, ".config", "nvim", "tmp")
+local cargo_bin = vim.fs.joinpath(home, ".cargo", "bin")
 
 g.mapleader = " "
 g.maplocalleader = " "
+
+if vim.fn.isdirectory(cargo_bin) == 1 and not vim.env.PATH:find(cargo_bin, 1, true) then
+  vim.env.PATH = cargo_bin .. ":" .. vim.env.PATH
+end
 
 g.netrw_banner = 0
 g.netrw_liststyle = 3
