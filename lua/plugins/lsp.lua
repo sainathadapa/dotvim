@@ -15,11 +15,11 @@ end
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "main",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      require("nvim-treesitter.configs").setup({
+      require("nvim-treesitter").setup({
         ensure_installed = {
           "bash",
           "json",
@@ -32,11 +32,6 @@ return {
           "yaml",
         },
         auto_install = true,
-        highlight = { enable = true },
-        indent = {
-          enable = true,
-          disable = { "python" },
-        },
       })
     end,
   },
@@ -99,7 +94,6 @@ return {
       require("mason-tool-installer").setup({
         ensure_installed = {
           "stylua",
-          "ruff",
           "prettier",
           "sql-formatter",
         },
