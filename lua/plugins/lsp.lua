@@ -47,9 +47,13 @@ return {
     },
     config = function()
       require("blink.cmp").setup({
-        keymap = { preset = "default" },
+        keymap = {
+          preset = "default",
+          ["<Tab>"] = { "select_next", "fallback" },
+          ["<S-Tab>"] = { "select_prev", "fallback" },
+        },
         appearance = { nerd_font_variant = "mono" },
-        fuzzy = { implementation = "rust" },
+        fuzzy = { implementation = "lua" },
         completion = {
           documentation = {
             auto_show = true,
